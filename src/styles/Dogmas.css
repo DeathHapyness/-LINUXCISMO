@@ -1,0 +1,57 @@
+/* Dogmas.css */
+
+.dogmas {
+  background: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid var(--green-dark);
+  border-bottom: 1px solid var(--green-dark);
+  padding: 6rem 2rem;
+}
+
+.dogmas__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.dogma-card {
+  border: 1px solid var(--green-dark);
+  padding: 2rem;
+  position: relative;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  background: rgba(0, 255, 65, 0.02);
+}
+
+.dogma-card:hover {
+  border-color: var(--green-dim);
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.08);
+}
+
+.dogma-card__num {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  color: var(--green-dark);
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  line-height: 1;
+  user-select: none;
+}
+
+.dogma-card__title {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  color: var(--gold);
+  margin-bottom: 0.8rem;
+  letter-spacing: 2px;
+}
+
+.dogma-card__text {
+  font-size: 0.8rem;
+  line-height: 1.9;
+  color: var(--green-dim);
+}
+
+@media (max-width: 768px) {
+  .dogmas__grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,60 @@
+/* Prophets.css */
+
+.prophets {
+  padding: 6rem 2rem;
+}
+
+.prophets__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.prophet-card {
+  text-align: center;
+  padding: 2rem 1rem;
+  border: 1px solid var(--green-dark);
+  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  background: rgba(0, 255, 65, 0.01);
+}
+
+.prophet-card:hover {
+  border-color: var(--green);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 255, 65, 0.1);
+}
+
+.prophet-card__ascii {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  line-height: 1.3;
+  color: var(--green);
+  white-space: pre;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.prophet-card__name {
+  font-family: var(--font-serif);
+  color: var(--gold);
+  font-size: 0.95rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.4rem;
+}
+
+.prophet-card__role {
+  font-size: 0.65rem;
+  color: var(--green-dim);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.prophet-card__img{
+  width: 100%;
+  height: 120px;
+}
+
+@media (max-width: 768px) {
+  .prophets__grid { grid-template-columns: repeat(2, 1fr); }
+}

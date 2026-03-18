@@ -1,0 +1,93 @@
+/* Convert.css */
+
+.convert {
+  padding: 6rem 2rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid var(--green-dark);
+}
+
+.convert__box {
+  background: rgba(0, 255, 65, 0.03);
+  border: 1px solid var(--green-dark);
+  padding: 4rem 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.convert__box p {
+  font-size: 0.85rem;
+  color: var(--green-dim);
+  max-width: 500px;
+  margin: 0 auto 2rem;
+  line-height: 2;
+}
+
+.convert__input-group {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto 1rem;
+}
+
+.convert__input {
+  flex: 1;
+  background: var(--black);
+  border: 1px solid var(--green-dark);
+  border-right: none;
+  color: var(--green);
+  font-size: 0.85rem;
+  padding: 0.9rem 1.2rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.convert__input:focus {
+  border-color: var(--green);
+}
+
+.convert__input::placeholder {
+  color: #2e6e2e;
+}
+
+.convert__submit {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  padding: 0.9rem 1.5rem;
+  background: var(--green);
+  color: var(--black);
+  border: none;
+  font-weight: bold;
+  transition: background 0.2s;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.convert__submit:hover {
+  background: var(--green-dim);
+}
+
+.convert__note {
+  font-size: 0.65rem;
+  color: #2e6e2e;
+  letter-spacing: 1px;
+}
+
+.convert__success {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: var(--gold);
+  letter-spacing: 1px;
+  animation: fade-in-up 0.4s ease forwards;
+}
+
+@media (max-width: 768px) {
+  .convert__input-group {
+    flex-direction: column;
+  }
+  .convert__input {
+    border-right: 1px solid var(--green-dark);
+    border-bottom: none;
+  }
+  .convert__box {
+    padding: 2rem 1.5rem;
+  }
+}

@@ -1,0 +1,93 @@
+/* Scriptures.css */
+
+.scriptures {
+  background: rgba(0, 0, 0, 0.25);
+  border-top: 1px solid var(--green-dark);
+  border-bottom: 1px solid var(--green-dark);
+  padding: 6rem 2rem;
+}
+
+/* Prayer box */
+.prayer-box {
+  background: var(--green-dark);
+  border: 1px solid var(--green-dim);
+  padding: 3rem;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 0 60px rgba(0, 255, 65, 0.1);
+  margin: 3rem 0;
+}
+
+.prayer-box::before,
+.prayer-box::after {
+  content: '✦';
+  position: absolute;
+  top: 1rem;
+  color: var(--gold);
+  font-size: 1rem;
+}
+
+.prayer-box::before { left: 1.5rem; }
+.prayer-box::after  { right: 1.5rem; }
+
+.prayer-box__title {
+  font-family: var(--font-serif);
+  color: var(--gold);
+  letter-spacing: 4px;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.prayer-box__text {
+  font-family: var(--font-code);
+  font-style: italic;
+  font-size: 0.85rem;
+  line-height: 2.3;
+  color: var(--white);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Scripture verses */
+.scripture-item {
+  border-left: 2px solid var(--green-dark);
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+  transition: border-color 0.3s;
+}
+
+.scripture-item:hover {
+  border-color: var(--green);
+}
+
+.scripture-item__ref {
+  font-size: 0.65rem;
+  color: var(--gold);
+  letter-spacing: 3px;
+  margin-bottom: 0.6rem;
+  display: block;
+}
+
+.scripture-item__quote {
+  font-family: var(--font-code);
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--white);
+  line-height: 2;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.scripture-item__source {
+  display: block;
+  margin-top: 0.8rem;
+  font-size: 0.65rem;
+  color: var(--green-dim);
+  letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+  .prayer-box { padding: 2rem 1.5rem; }
+  .scripture-item { padding: 1rem 1.2rem; }
+}
