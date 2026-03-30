@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/Footer.css';
 
 const LINKS = [
+  { label: 'O Inicio',   href: '/inicio', route: true },
   { label: 'Dogmas',     href: '#dogmas'     },
   { label: 'Profetas',   href: '#profetas'   },
   { label: 'Escrituras', href: '#escrituras' },
@@ -20,7 +22,7 @@ export default function Footer() {
       <ul className="footer__links">
         {LINKS.map(l => (
           <li key={l.label}>
-            <a href={l.href}>{l.label}</a>
+            {l.route ? <Link to={l.href}>{l.label}</Link> : <a href={l.href}>{l.label}</a>}
           </li>
         ))}
       </ul>
